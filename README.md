@@ -16,4 +16,6 @@ Special Sauce:
 - @A Pygmy Hippo: responds to @A Pygmy Hippo with an annoyed hippo
 - Nagging : occasionally tells afora to study
 
-
+Requirements:
+- discord.py
+- pyperclip (for uwuifier)
