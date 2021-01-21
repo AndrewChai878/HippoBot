@@ -13,7 +13,9 @@ Special Sauce:
 - Probby: 1/10 chance of responding to messages with "probby" in it
 - Collection: 1/10 change of responding to general grevious collection gif to attachments
 - @A Pygmy Hippo: responds to @A Pygmy Hippo with an annoyed hippo
-- Nagging : occasionally tells afora to study
+- Nagging : occasionally tells people to study
+
+
 
 '''
 
@@ -71,7 +73,7 @@ async def uwuify(ctx, *, arg):
 
 @bot.event
 async def on_message(message):
-    if (('robots' in message.content or 'robot' in message.content)and str(message.author) != "Hippo Bot#4735"):
+    if ((('robots' in message.content or 'robot' in message.content)or ('Robots' in message.content or 'Robot' in message.content))and str(message.author) != "Hippo Bot#4735"):
         #print('fuck your robots')
         print('responding to' + str(message.author))
         
@@ -84,14 +86,16 @@ async def on_message(message):
             await message.channel.send("Probby?!? :eyes: better fuckin secure my guarenteed habitables")
     elif (message.attachments and str(message.author) != "Hippo Bot#4735"):
         #print(message.attachments)
+        print("shitmemetbh")
         triggerint = random.randint(0,9)
         if (triggerint == 1):
             await message.channel.send("https://i.imgur.com/b4Pk9yv.gif")
+            print("ooh a collectible")
     elif (message.mentions):
-        if (str(message.mentions[0]) == "A Pygmy Hippo#4285"):
+        if ((str(message.mentions[0]) == "A Pygmy Hippo#4285") and str(message.author) != "Hippo Bot#4735"):
             await message.channel.send("https://i.imgur.com/IthbwWM.jpg")
     elif (str(message.author) == "Afora#7481"):
-        triggerint = random.randint(0,3)
+        triggerint = random.randint(0,49)
         if (triggerint == 1):
             await message.channel.send("Hey Afora why aren't you studying?")
 
